@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Kawiarnia Pod Chmurką | Wysokie Mazowieckie, ul. Szpitalna 5</title>
+<meta name="description" content="Makieta strony Kawiarni Pod Chmurką (Bistro Chmurka) z Wysokiego Mazowieckiego: włoska kawa, domowe ciasta, bajgle i obiady.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700;800&family=Public+Sans:wght@400;500;700&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --paper:#f1f4f7;
+  --paper-2:#e2e9ef;
+  --ink:#1c2430;
+  --ink-2:#56606d;
+  --line:#c9d3dd;
+  --accent:#b8265a;
+  --accent-hover:#951e49;
+  --r:6px;
+  --s1:8px;--s2:16px;--s3:24px;--s4:40px;--s5:64px;--s6:104px;
+  --gut:clamp(20px,5vw,56px);
+  --hd:'Alegreya',Georgia,serif;
+  --bd:'Public Sans','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--paper)}
+body{font-family:var(--bd);font-size:17px;line-height:1.55;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--hd);font-weight:800;line-height:1.05}
+h2{font-size:clamp(32px,4.4vw,48px)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 var(--gut)}
+.small{font-size:14px;color:var(--ink-2)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 var(--s3);border-radius:var(--r);background:var(--accent);color:#fff;font:700 16px var(--bd);text-decoration:none;border:1px solid var(--accent);cursor:pointer;transition:background .15s}
+.btn:hover{background:var(--accent-hover)}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.alt:hover{background:var(--ink);color:var(--paper)}
+
+header{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:var(--s2);padding:12px var(--gut);border-bottom:1px solid transparent;transition:background .15s,border-color .15s}
+header.solid{background:var(--paper);border-color:var(--line)}
+.brand{font-family:var(--hd);font-weight:800;font-size:22px;text-decoration:none;line-height:1.05}
+header nav{display:flex;gap:var(--s3);font-weight:500;font-size:15px}
+header nav a{text-decoration:none}
+header nav a:hover{text-decoration:underline}
+@media(max-width:560px){header nav .opt{display:none}.brand{font-size:19px}}
+
+.track{position:relative;height:240vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+#cv{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero{position:absolute;left:48%;right:var(--gut);bottom:clamp(40px,12vh,112px);z-index:2}
+.hero h1{font-size:clamp(38px,5.4vw,68px)}
+.hero p{margin-top:var(--s2);max-width:40ch;font-size:19px}
+.hero .row{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s3)}
+.hero .facts{margin-top:var(--s3);font-size:14px;color:var(--ink-2)}
+.load{position:absolute;left:24%;top:50%;transform:translate(-50%,-50%);font-size:14px;color:var(--ink-2);transition:opacity .4s}
+@media(max-width:860px){.hero{left:var(--gut);bottom:32px}.hero h1{font-size:34px}.hero p{font-size:17px}.stage #cv{height:60%}.load{left:50%;top:30%}}
+
+.sec{padding:var(--s6) 0}
+.sec.alt{background:var(--paper-2)}
+.two{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s5);align-items:start}
+@media(max-width:860px){.two{grid-template-columns:1fr;gap:var(--s4)}.sec{padding:var(--s5) 0}}
+
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s3);margin-bottom:var(--s4)}
+.arrows{display:flex;gap:var(--s1)}
+.arrows button{width:48px;height:48px;border:1px solid var(--ink);border-radius:var(--r);background:transparent;font:400 26px var(--bd);color:var(--ink);cursor:pointer;line-height:1}
+.arrows button:hover{background:var(--ink);color:var(--paper)}
+.cards{display:flex;gap:var(--s3);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:var(--s2);scrollbar-width:thin;scrollbar-color:var(--ink-2) transparent}
+.card{flex:0 0 min(264px,76vw);scroll-snap-align:start;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.card .ph{aspect-ratio:4/5;background:var(--paper-2);position:relative;border-bottom:1px solid var(--line)}
+.card .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card .ph .slot{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:var(--s2);color:var(--ink-2);font-size:13px;background:var(--paper)}
+.card .ph .slot b{font:800 22px var(--hd);color:var(--ink)}
+.card .bd{padding:var(--s2);display:flex;flex-direction:column;gap:var(--s1);flex:1}
+.card h3{font-size:23px}
+.card p{font-size:15px;color:var(--ink-2);flex:1}
+.card .add{margin-top:var(--s1);min-height:44px;border:1px solid var(--accent);border-radius:var(--r);background:transparent;color:var(--accent);font:700 15px var(--bd);cursor:pointer}
+.card .add:hover,.card .add.on{background:var(--accent);color:#fff}
+
+blockquote{margin-top:var(--s4);padding-left:var(--s2);border-left:3px solid var(--accent);max-width:50ch}
+blockquote p{font-size:19px}
+blockquote cite{display:block;margin-top:var(--s1);font-style:normal;font-size:14px;color:var(--ink-2)}
+
+.pick{list-style:none;border-top:2px solid var(--ink);margin-top:var(--s3)}
+.pick li{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);padding:12px 0;border-bottom:1px solid var(--line)}
+.pick b{font-weight:700;font-size:18px}
+.qty{display:flex;align-items:center}
+.qty button{width:44px;height:44px;border:1px solid var(--ink);background:transparent;font:500 22px var(--bd);color:var(--ink);cursor:pointer;line-height:1}
+.qty button:first-child{border-radius:var(--r) 0 0 var(--r)}
+.qty button:last-child{border-radius:0 var(--r) var(--r) 0}
+.qty button:hover{background:var(--ink);color:var(--paper)}
+.qty output{min-width:44px;height:44px;display:grid;place-items:center;border-block:1px solid var(--ink);font-weight:700}
+fieldset{border:0;margin-top:var(--s3)}
+legend,label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+.seg{display:flex;flex-wrap:wrap;gap:var(--s1)}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg label{margin:0;padding:10px var(--s2);border:1px solid var(--ink);border-radius:var(--r);cursor:pointer;font-weight:500;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
+.seg input:checked+label{background:var(--ink);color:var(--paper)}
+.seg input:focus-visible+label{outline:2px solid var(--accent);outline-offset:2px}
+.fields{display:grid;gap:var(--s2);margin-top:var(--s3)}
+input[type=text]{width:100%;min-height:48px;padding:0 12px;font:16px var(--bd);color:var(--ink);background:#fff;border:1px solid var(--ink-2);border-radius:var(--r)}
+input[type=text]:focus{outline:2px solid var(--accent);outline-offset:1px}
+.preview{border:2px solid var(--ink);border-radius:var(--r);background:#fff;padding:var(--s3);position:sticky;top:72px}
+.preview h3{font-size:24px;margin-bottom:var(--s2)}
+.preview pre{white-space:pre-wrap;font:16px/1.6 var(--bd);min-height:200px}
+.preview pre.hint{color:var(--ink-2)}
+.acts{display:grid;gap:var(--s1);margin-top:var(--s3)}
+.msg{min-height:22px;font-size:14px;margin-top:var(--s1);color:var(--ink-2)}
+@media(max-width:860px){.preview{position:static}}
+
+dl{display:grid;grid-template-columns:auto 1fr;gap:var(--s1) var(--s3);margin-top:var(--s3)}
+dt{color:var(--ink-2);font-size:14px;padding-top:4px}
+dd{font-size:18px}
+.map{border:2px solid var(--ink);border-radius:var(--r);overflow:hidden;min-height:340px;background:var(--paper-2)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+footer{padding:var(--s4) 0 var(--s5);border-top:1px solid var(--line)}
+footer p{max-width:78ch}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header id="hd">
+  <a class="brand" href="#start">Kawiarnia<br>Pod Chmurką</a>
+  <nav aria-label="Menu"><a class="opt" href="#oferta">Oferta</a><a href="#zamow">Zamów</a><a class="opt" href="#kontakt">Kontakt</a></nav>
+</header>
+
+<main>
+<section class="track" id="start">
+  <div class="stage">
+    <canvas id="cv" role="img" aria-label="Trójwymiarowa filiżanka espresso na spodku. Model wygenerowany komputerowo, nie zdjęcie kawiarni."></canvas>
+    <div class="load" id="load">Ładuję model 3D</div>
+    <div class="hero">
+      <h1>Włoska kawa, domowe ciasta i obiady</h1>
+      <p>Rodzinna kawiarnia z Wysokiego Mazowieckiego. Ciasta pieczemy na miejscu, obiady gotujemy na miejscu.</p>
+      <div class="row"><a class="btn" href="#zamow">Zamów na wynos</a><a class="btn alt" href="tel:+48603662554">603 662 554</a></div>
+      <p class="facts">ul. Szpitalna 5, Wysokie Mazowieckie. Na miejscu, na wynos, z dostawą.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="oferta">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2>Oferta</h2>
+        <p class="small" style="margin-top:var(--s2);max-width:46ch">Pozycje i ceny podaje kawiarnia. Dodaj pozycje do zamówienia przyciskiem na karcie.</p>
+      </div>
+      <div class="arrows"><button type="button" id="prev" aria-label="Poprzednie pozycje">‹</button><button type="button" id="next" aria-label="Następne pozycje">›</button></div>
+    </div>
+    <div class="cards" id="cards" tabindex="0" aria-label="Karty oferty"></div>
+    <blockquote>
+      <p>Rodzinna kawiarnia, która wyrosła z miłości do kawy i słodkości.</p>
+      <cite>z lokalnego artykułu o kawiarni, 2021</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section class="sec" id="zamow">
+  <div class="wrap two">
+    <div>
+      <h2>Zamów na wynos</h2>
+      <p class="small" style="margin-top:var(--s2);max-width:46ch">Zaznacz, co chcesz, i o której przyjdziesz. Po prawej powstaje wiadomość do kawiarni. Wyślesz ją na Messengerze albo zadzwonisz.</p>
+      <ul class="pick" id="pick"></ul>
+      <fieldset><legend>Odbiór</legend><div class="seg" id="seg"></div></fieldset>
+      <div class="fields">
+        <div><label for="nt">Uwagi</label><input type="text" id="nt" placeholder="np. kawa na mleku owsianym" autocomplete="off"></div>
+        <div><label for="nm">Twoje imię</label><input type="text" id="nm" autocomplete="given-name"></div>
+      </div>
+    </div>
+    <aside class="preview" aria-live="polite">
+      <h3>Twoja wiadomość</h3>
+      <pre id="pre" class="hint">Wybierz co najmniej jedną pozycję, a tu pojawi się gotowa wiadomość.</pre>
+      <div class="acts">
+        <button type="button" class="btn" id="copy">Kopiuj wiadomość</button>
+        <a class="btn alt" href="https://m.me/100063171973616" target="_blank" rel="noopener">Otwórz Messenger kawiarni</a>
+        <a class="btn alt" href="tel:+48603662554">Zadzwoń: 603 662 554</a>
+      </div>
+      <div class="msg" id="msg" role="status"></div>
+    </aside>
+  </div>
+</section>
+
+<section class="sec alt" id="kontakt">
+  <div class="wrap two">
+    <div>
+      <h2>Kontakt</h2>
+      <dl>
+        <dt>Adres</dt><dd>ul. Szpitalna 5<br>18-200 Wysokie Mazowieckie</dd>
+        <dt>Telefon</dt><dd><a href="tel:+48603662554">603 662 554</a></dd>
+        <dt>Facebook</dt><dd><a href="https://www.facebook.com/profile.php?id=100063171973616" rel="noopener">Kawiarnia Pod Chmurką (Bistro Chmurka)</a></dd>
+        <dt>Opinie</dt><dd>100% poleca, 29 opinii na Facebooku</dd>
+        <dt>Nagrody</dt><dd>Laureat plebiscytu Orły Cukiernictwa w 2020 i 2021 roku (według serwisu orlycukiernictwa.pl)</dd>
+      </dl>
+    </div>
+    <div class="map"><iframe title="Mapa: ul. Szpitalna 5, Wysokie Mazowieckie" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=22.5122%2C52.9102%2C22.5322%2C52.9202&amp;layer=mapnik&amp;marker=52.9152%2C22.5222"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="small">To makieta nowej strony. Nie ma na niej zdjęć kawiarni: filiżanka na ekranie to model 3D wygenerowany komputerowo. W pełnej wersji pojawią się prawdziwe zdjęcia, aktualne godziny otwarcia i menu z cenami, za zgodą właścicieli. Teksty, adres i opinie pochodzą z facebookowej strony i obecnej strony kawiarni.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var hd=$('hd'),track=document.querySelector('.track');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);var t=id&&$(id);if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-(id==='start'?0:56),behavior:'smooth'})}});
+addEventListener('scroll',function(){hd.classList.toggle('solid',scrollY>40)},{passive:true});
+
+var cv=$('cv'),load=$('load'),ok=false,model=null,pivot,R,S,cam;
+try{var t=document.createElement('canvas');ok=!!(window.WebGLRenderingContext&&(t.getContext('webgl')||t.getContext('experimental-webgl')))&&window.THREE&&THREE.GLTFLoader}catch(e){}
+if(ok){
+ R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio||1,2));R.outputEncoding=THREE.sRGBEncoding;
+ S=new THREE.Scene();cam=new THREE.PerspectiveCamera(30,1,.1,100);cam.position.set(0,0,8);
+ S.add(new THREE.AmbientLight(0xffffff,.65));
+ var k=new THREE.DirectionalLight(0xfff3e4,1.35);k.position.set(-3,5,5);S.add(k);
+ var r=new THREE.DirectionalLight(0xffd2c4,.8);r.position.set(4,2,-4);S.add(r);
+ pivot=new THREE.Group();S.add(pivot);
+ new THREE.GLTFLoader().load('cup.glb',function(g){
+  model=g.scene;var b=new THREE.Box3().setFromObject(model),sz=b.getSize(new THREE.Vector3()),c=b.getCenter(new THREE.Vector3());
+  var s=2.7/Math.max(sz.x,sz.y,sz.z);model.scale.setScalar(s);model.position.set(-c.x*s,-c.y*s,-c.z*s);
+  pivot.add(model);load.style.opacity=0;setTimeout(function(){load.style.display='none'},500);draw()
+ },undefined,function(){load.textContent='Nie udało się wczytać modelu 3D.'});
+}else{load.style.display='none'}
+function fit(){if(!ok)return;var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;R.setSize(w,h,false);cam.aspect=w/h;cam.position.z=w/h<.8?9.5:8.2;cam.updateProjectionMatrix();draw()}
+if(ok){if(window.ResizeObserver)new ResizeObserver(fit).observe(cv);else addEventListener('resize',fit)}
+var still=matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,vis=true;
+if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting}).observe(document.querySelector('.stage'));
+function draw(){
+ if(!model)return;
+ var rr=track.getBoundingClientRect(),tot=track.offsetHeight-innerHeight,p=Math.min(1,Math.max(0,-rr.top/tot));
+ var w=cv.clientWidth/cv.clientHeight,mob=w<.9;
+ pivot.rotation.y=(still?0:p*Math.PI*2)-.55;
+ pivot.rotation.x=.34;
+ pivot.scale.setScalar(1);
+ pivot.position.x=mob?0:(w<1.4?-1.2:-2.1);
+ pivot.position.y=mob?.9:.1;
+ R.render(S,cam)}
+(function loop(){requestAnimationFrame(loop);if(vis)draw()})();
+
+var items=[['Kawa','włoska, napisz w uwagach jaka'],['Ciasto','pieczone na miejscu'],['Bajgiel','według autorskiej receptury'],['Śniadanie',''],['Obiad domowy','gotowany na miejscu']];
+var q=items.map(function(){return 0}),ul=$('pick');
+items.forEach(function(it,i){var li=document.createElement('li');li.innerHTML='<div><b>'+it[0]+'</b>'+(it[1]?'<div class="small">'+it[1]+'</div>':'')+'</div><div class="qty"><button type="button" aria-label="Mniej: '+it[0]+'">−</button><output>0</output><button type="button" aria-label="Więcej: '+it[0]+'">+</button></div>';
+ var bs=li.querySelectorAll('button'),o=li.querySelector('output');
+ bs[0].onclick=function(){q[i]=Math.max(0,q[i]-1);o.textContent=q[i];calc()};
+ bs[1].onclick=function(){q[i]=Math.min(9,q[i]+1);o.textContent=q[i];calc()};ul.appendChild(li)});
+
+var slugs=['kawa','ciasto','bajgiel','sniadanie','obiad'],cardDesc=['Włoska kawa, podawana od rana.','Ciasta wypiekane na miejscu z naturalnych składników.','Bajgle według autorskiej receptury kawiarni.','Śniadania w dni robocze. Godziny podaje kawiarnia.','Domowe obiady gotowane na miejscu.'],cardsEl=$('cards'),addBtns=[];
+items.forEach(function(it,i){var c=document.createElement('article');c.className='card';
+ c.innerHTML='<div class="ph"><div class="slot"><b>'+it[0]+'</b><span>Tu pojawi się zdjęcie z Waszej kawiarni</span></div><img alt="'+it[0]+', Kawiarnia Pod Chmurką" src="photos/'+slugs[i]+'.jpg" loading="lazy"></div><div class="bd"><h3>'+it[0]+'</h3><p>'+cardDesc[i]+'</p><button type="button" class="add">Dodaj do zamówienia</button></div>';
+ c.querySelector('img').onerror=function(){this.remove()};
+ var b=c.querySelector('.add');addBtns.push(b);
+ b.onclick=function(){q[i]=Math.min(9,q[i]+1);ul.children[i].querySelector('output').textContent=q[i];calc()};
+ cardsEl.appendChild(c)});
+$('prev').onclick=function(){cardsEl.scrollBy({left:-284,behavior:'smooth'})};
+$('next').onclick=function(){cardsEl.scrollBy({left:284,behavior:'smooth'})};
+function syncCards(){addBtns.forEach(function(b,i){b.classList.toggle('on',q[i]>0);b.textContent=q[i]>0?'W zamówieniu: '+q[i]+' (dodaj jeszcze)':'Dodaj do zamówienia'})}
+
+var times=['jak najszybciej','za 15 minut','za 30 minut','za godzinę'],seg=$('seg');
+times.forEach(function(t,i){var id='t'+i;seg.insertAdjacentHTML('beforeend','<input type="radio" name="tm" id="'+id+'" value="'+t+'"'+(i===0?' checked':'')+'><label for="'+id+'">'+t+'</label>')});
+function when(){var c=document.querySelector('input[name=tm]:checked');return c?c.value:times[0]}
+function txt(){var L=['Dzień dobry,','','proszę o przygotowanie na wynos:'],n=0;
+ items.forEach(function(it,i){if(q[i]){L.push('• '+it[0]+' × '+q[i]);n+=q[i]}});
+ L.push('','Odbiór: '+when());var nt=$('nt').value.trim();if(nt)L.push('Uwagi: '+nt);var nm=$('nm').value.trim();L.push('','Pozdrawiam'+(nm?', '+nm:''));return {n:n,s:L.join('\n')}}
+function calc(){var r=txt(),pre=$('pre');syncCards();
+ pre.textContent=r.n?r.s:'Wybierz co najmniej jedną pozycję, a tu pojawi się gotowa wiadomość.';pre.classList.toggle('hint',!r.n)}
+['nm','nt'].forEach(function(i){$(i).addEventListener('input',calc)});seg.addEventListener('change',calc);
+$('copy').addEventListener('click',function(){var m=$('msg'),r=txt();if(!r.n){m.textContent='Najpierw wybierz pozycję.';return}
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(r.s).then(function(){m.textContent='Skopiowano. Wklej w wiadomość na Messengerze kawiarni.'},function(){m.textContent='Nie udało się skopiować. Zaznacz tekst ręcznie.'})}else{m.textContent='Nie udało się skopiować. Zaznacz tekst ręcznie.'}});
+calc();
+})();
+</script>
+</body>
+</html>
